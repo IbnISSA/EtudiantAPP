@@ -1,0 +1,60 @@
+{
+  "etudiants": [
+    {
+      "matriculeEtudiant": "Et-03052023074046-@",
+      "nomEtudiant": "NDIAYE",
+      "prenomEtudiant": "Doudou",
+      "dateNaissEtudiant": "2000-02-21",
+      "addresseEtudiant": "Bamako",
+      "telEtudiant": "777810059",
+      "id": 1,
+      "classe": {
+        "nomClasse": "M-DSIA"
+      }
+    },
+    {
+      "matriculeEtudiant": "Et-03052023091055-@",
+      "nomEtudiant": "TRAORE",
+      "prenomEtudiant": "Bourama",
+      "dateNaissEtudiant": "2004-06-05",
+      "addresseEtudiant": "Dakar",
+      "telEtudiant": "780944558",
+      "id": 2,
+      "classe": {
+        "nomClasse": "L-GL"
+      }
+    },
+    {
+      "matriculeEtudiant": "Et-04052023050531-@",
+      "nomEtudiant": "CAMARA",
+      "prenomEtudiant": "Almamy",
+      "dateNaissEtudiant": "1998-06-04",
+      "addresseEtudiant": "Conakry",
+      "telEtudiant": "776860000",
+      "id": 3,
+      "classe": {
+        "nomClasse": "M-DSIA"
+      }
+    }
+  ],
+  "classes": [
+    {
+      "nomClasse": "L-GL"
+    },
+    {
+      "nomClasse": "L-RT"
+    },
+    {
+      "nomClasse": "L-ETT"
+    },
+    {
+      "nomClasse": "M-DSIA"
+    },
+    {
+      "nomClasse": "M-RT"
+    },
+    {
+      "nomClasse": "M-GL"
+    }
+  ]
+}

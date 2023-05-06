@@ -1,0 +1,89 @@
+<div class="container h-100 d-flex align-items-center justify-content-center">
+  <div class="card card-margin" style="width: 60%">
+    <div class="card-header">
+      <h2>Modification des Étudiants :</h2>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Matricule</label>
+          <input
+            type="text"
+            disabled
+            [(ngModel)]="currentEtudiant.matriculeEtudiant"
+            name="matriculeEtudiant"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Nom</label>
+          <input
+            type="text"
+            [(ngModel)]="currentEtudiant.nomEtudiant"
+            name="nomEtudiant"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Prenom</label>
+          <input
+            type="text"
+            [(ngModel)]="currentEtudiant.prenomEtudiant"
+            name="prenomEtudiant"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Date de naissance</label>
+          <input
+            type="date"
+            [(ngModel)]="currentEtudiant.dateNaissEtudiant"
+            name="dateNaissEtudiant"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Addresse</label>
+          <input
+            type="text"
+            [(ngModel)]="currentEtudiant.addresseEtudiant"
+            name="addresseEtudiant"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Numéro de téléphone</label>
+          <input
+            type="text"
+            [(ngModel)]="currentEtudiant.telEtudiant"
+            name="telEtudiant"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <label>Classe</label>
+          <select
+            #cricket
+            name="nomClasse"
+            (ngModelChange)="onChange()"
+            [(ngModel)]="selectedClasse.nomClasse"
+            class="form-control"
+          >
+            <option *ngFor="let classe of etudiantService.classes">
+              {{ classe.nomClasse }}
+            </option>
+          </select>
+        </div>
+        <div class="mt-2">
+          <button
+            type="submit"
+            (click)="updateEtudiant()"
+            class="btn btn-success"
+          >
+            Modifier
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

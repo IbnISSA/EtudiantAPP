@@ -1,0 +1,53 @@
+<div class="container h-100 d-flex align-items-center justify-content-center">
+    <div class="card card-margin" style="width: 60%;">
+        <div class="card-header">
+            <h2>Ajout d'Étudiant :</h2>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Matricule</label>
+                    <input type="text" disabled [(ngModel)]="newEtudiant.matriculeEtudiant" name="matriculeEtudiant"
+                        class="form-control">
+                </div>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Nom</label>
+                    <input type="text" [(ngModel)]="newEtudiant.nomEtudiant" name="nomEtudiant" class="form-control">
+                </div>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Prenom</label>
+                    <input type="text" [(ngModel)]="newEtudiant.prenomEtudiant" name="prenomEtudiant"
+                        class="form-control">
+                </div>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Date de naissance</label>
+                    <input type="date" [(ngModel)]="newEtudiant.dateNaissEtudiant" name="dateNaissEtudiant"
+                        class="form-control">
+                </div>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Addresse</label>
+                    <input type="text" [(ngModel)]="newEtudiant.addresseEtudiant" name="addresseEtudiant"
+                        class="form-control">
+                </div>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Numéro de téléphone</label>
+                    <input type="text" [(ngModel)]="newEtudiant.telEtudiant" name="telEtudiant" class="form-control">
+                </div>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <label>Classe</label>
+                    <select #cricket name="classe" (change)="onChange()" [(ngModel)]="selectedClasse" class="form-control">
+                        <option value="" disabled selected="selected">  Selectionner la classe</option>
+                        <option *ngFor="let classe of etudiantService.classes" [ngValue]="classe" >
+                            {{classe.nomClasse}}
+                        </option>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <button type="submit" (click)="addEtudiant()" class="btn btn-success">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
